@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +6,15 @@
     <title>Choose Your Preferred Sport</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
+        nav{
+            position: relative;
+            top: 0em;
+        }
+    body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -25,6 +25,8 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            top: 10em;
         }
 
         h1 {
@@ -63,7 +65,8 @@
     </style>
 </head>
 <body>
-
+    @extends('layouts.layout')
+    @section("content")
 <div class="container">
     <h1>Choose Your Preferred Sport</h1>
     <form action="/submit-preference" method="post">
@@ -82,7 +85,7 @@
 
     </form>
 </div>
-
+@endsection
 </body>
 </html>
 

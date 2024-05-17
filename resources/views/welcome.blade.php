@@ -8,85 +8,7 @@
 </head>
 
 <style>
-    *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
 
-
-}
- body{
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-header{
-    align-items: center ;
-    justify-content:end ;
-    display: flex;
-    box-shadow: 10px 9px 8px black;
-    width: 100%;
-
-    
-}
-header h1{
-    align-items: center ;
-    display: flex;
-    color: #7e5757;
-    padding: 10px;
-    margin-right:500px;
-
-}
-
-
-header ul li{
-    display: inline;
-    padding: 0 20px;
-    text-decoration: none
-
-
-}
-header ul li a{
-    color: black;
-    text-decoration: none;
-    padding: 14px;
-
-
-
-}
-
-header h1 span{
-    font-style: italic;
-    font-size: 1.8em;
-    color: var(--color1);
-}
-span{
-    font-style: italic;
-    font-size: 1.8em;
-    color: #7e5757;
-
-
-}
-
-a{
-
-    transition: .7s;
-}
-a:hover{
-    background-color: #7e5757;
-    color: black;
-    text-decoration: none
-}
-
-h2{
-    text-align: center;
-    font-size: xx-large;
-    font-size: 100px;
-    padding: 0 20px;
-    z-index: -1;
-}
 
 
 .wrapper{
@@ -180,16 +102,8 @@ input:checked + label .description {
 </style>
 <body>
 
-    <header>
-        <h1> <span>C</span>entre</h1>
-
-        <ul>
-            <li><a href="/chose">About</a></li>
-            <li><a href="/service">Service</a></li>
-            <li><a href="/login">Login</a></li>
-        </ul>
-
-    </header>
+    @extends('layouts.layout')
+    @section("content")
 
 <h2> Welcome to our <span>C</span>entre </h2>
 
@@ -243,8 +157,8 @@ input:checked + label .description {
                     <div class="description">
                         <h4>Cricket</h4>
                         <p> cricket is a dynamic and captivating sport that combines athleticism, strategy, and sportsmanship.
-                             Whether played at the grassroots level or on the international stage,
-                              cricket continues to inspire and unite people around the world,
+                            Whether played at the grassroots level or on the international stage,
+                            cricket continues to inspire and unite people around the world,
                             making it one of the most cherished and beloved sports globally.</p>
                     </div>
                 </div>
@@ -256,7 +170,7 @@ input:checked + label .description {
                     <div class="description">
                         <h4> Natation </h4>
                         <p>Are you ready to make a splash towards a healthier lifestyle?
-                             Look no further than our state-of-the-art Sports Center,
+                            Look no further than our state-of-the-art Sports Center,
                             where we offer top-notch facilities and expert guidance to help you achieve your fitness goals through natation (swimming).</p>
                     </div>
                 </div>
@@ -264,6 +178,6 @@ input:checked + label .description {
         </div>
 
     </div>
-
+@endsection
 </body>
 </html>

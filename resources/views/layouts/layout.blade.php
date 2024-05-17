@@ -7,14 +7,49 @@
     <title>Document</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark  ">
-   <ul class="navbar-nav">
-        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="/info" class="nav-link">About</a></li>
-    </ul>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    nav{
+        position: fixed !important;
+        z-index: 1000;
+        width: 100%;
+    }
+    .container{
+        margin-top: 5em;
+    }
+    a h1 span{
+    font-style: italic !important;
+    font-size: 1.3em;
+    color: #7e5757;
+    }
 
-</nav>
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/"><h1> <span>C</span>entre</h1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/info">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/service">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="margin"></div>
 
 
 @yield('content')
