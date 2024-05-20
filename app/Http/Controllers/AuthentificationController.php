@@ -62,7 +62,7 @@ class AuthentificationController extends Controller
      */
     public function check_code_verification(Mot_de_pass_oublier_Request $request)
     {
-        
+
             $utilisateur=Utilisateur::select("select * from utilisateurs where email =".$request->email);
             if($request->code==$utilisateur[0]->code_de_recuperation){
                 $id=$utilisateur[0]->id;
@@ -71,7 +71,7 @@ class AuthentificationController extends Controller
             }else{
                 return back()->withErrors("error_code","code incorrect");
             }
-        
+
     }
 
     /**

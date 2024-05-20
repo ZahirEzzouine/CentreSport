@@ -2,40 +2,32 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Produitcontrol;
-use App\Http\Controllers\SportController;
-use App\Http\Controllers\ServiceControl;
-use App\Http\Controllers\Aboutcontrol;
-use App\Http\Controllers\Logincontroller;
+use App\Http\Controllers\AuthentificationController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 
-Route::get('/Produit',[Produitcontrol::class ,'create']);
-Route::get('/produit/create',[Produitcontrol::class ,'index']);
-Route::post('/Produit',[Produitcontrol::class ,'store']);
+Route::get('get_add',[AuthentificationController::class] ,'get_add');
 
 
-Route::get('/chose',[Aboutcontrol::class , 'index' ]);
+Route::get('/get_login',[AuthentificationController::class , 'get_login']);
 
-Route::get('/info',[SportController::class,'index'] );
 
-Route::get('/login',[Logincontroller::class,'index']);
+Route::get('/get_inscription',[AuthentificationController::class , 'get_inscription']);
 
 
 
+Route::post('/store_inscription',[AuthentificationController::class , 'store_inscription']);
 
-Route::get('/service',[ServiceControl:: class ,'index']);
-
-
-
+Route::post('/get_mot_de_passe_oublier',[AuthentificationController::class , 'get_mot_de_passe_oublier']);
 
 
 
-Route::middleware(['auth:user'])->group(function () {
+Route::post('/check_code_verification',[AuthentificationController::class , 'check_code_verification']);
 
-});
 
-Route::middleware(['auth:admin'])->group(function () {
+Route::post('/new_password',[AuthentificationController::class ],'new_password');
 
-});
+
