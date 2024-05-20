@@ -10,10 +10,13 @@
 <style>
 
 
-
+body{
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    height: 100vh;
+}
 .wrapper{
     width:100% ;
-    height: 100%;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +30,7 @@
 }
 .card{
     width:80px ;
-    border-radius: .75rem;
+    border-radius: 75px !important;
     background-size: cover;
     cursor: pointer;
     overflow: hidden;
@@ -66,7 +69,9 @@
     transition: all .3s ease;
 }
 .description{
-    color: #b0b0ba;
+    color: #d86315;
+    font-size:1.5em;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding-top: 5px;
 
 }
