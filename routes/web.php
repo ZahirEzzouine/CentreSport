@@ -30,4 +30,3 @@ Route::post('/check_code_verification',[AuthentificationController::class , 'che
 
 Route::post('/new_password',[AuthentificationController::class ],'new_password');
 
-
