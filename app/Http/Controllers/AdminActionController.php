@@ -28,13 +28,11 @@ class AdminActionController extends Controller
      */
     public function ajouter_événement()
     {
-        Utilisateur::create([
-            "nom" => $request->nom,
-            "email" => $request->email,
-            "password" => Hash::make($request->password),
-            "num_phone" => $request->num_phone,
-            "age" => $request->age,
-            "type_utilisateur" => "normal"
+        Événement::create([
+            "titre" => $request->titre,
+            "description" => $request->description,
+            "envoyer" => Hash::make($request->envoyer),
+            "sport_id" => $request->sport_id
         ]);
     }
 
@@ -56,27 +54,43 @@ class AdminActionController extends Controller
         return redirect("home");
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function get_ajouter_sport()
     {
-        //
+        return view("sport.get_ajouter_sport");
     }
 
     /**
-     * Update the specified resource in storage.
+     * stocker événement.
      */
-    public function update(Request $request, string $id)
+    public function ajouter_sport(Request $request)
     {
-        //
+        $request->validate([
+            "image"=>"required|image",
+            "nom"=>"required|string"
+        ]);
+        $imageName=$request->nom.".".$request->image->extension();
+        //$imagePath=$request->file('image')->store(config('images.path'),'public');
+        $request->logo->move(public_path("images_sports"),$imageName);
+        Sport::create([
+            "nom" => $request->nom,
+            "image" =>"images_sports/".$imageName
+        ]);
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Store a newly created resource in storage.
      */
-    public function destroy(string $id)
+    public function get_modifier_sport($id)
     {
-        //
+        $événement=Utilisateur::select("select * from utilisateurs where email =".$request->email);
+        return view("sport.get_modifier_sport",compact("sport"));
     }
-}
+
+    /**
+     * Display the specified resource.
+     */
+    public function modifier_sport(ModifierÉvénementRequest $request,$id)
+    {
+        DB::update("update utilisateurs set description=".$request->new_sport."where id=".$id);
+        return redirect("home");
+    }}
