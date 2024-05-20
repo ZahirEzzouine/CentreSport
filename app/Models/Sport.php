@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sport extends Model
 {
     use HasFactory;
-    protected $fillable=["nom"];
+    protected $fillable=["nom","image"];
     public function get_inscription(){
         return $this->hasMany(Inscription::class,'sport_id','id');
     }

@@ -17,7 +17,7 @@ class AdminActionController extends Controller
     }
 
 
-    
+
     public function get_ajouter_événement()
     {
         return view("AdminActions.get_ajouter_événement");
@@ -31,7 +31,7 @@ class AdminActionController extends Controller
         Événement::create([
             "titre" => $request->titre,
             "description" => $request->description,
-            "envoyer" => Hash::make($request->envoyer),
+            "envoyer" => $request->envoyer,
             "sport_id" => $request->sport_id
         ]);
     }
@@ -53,6 +53,7 @@ class AdminActionController extends Controller
         DB::update("update utilisateurs set description=".$request->new_événement."where id=".$id);
         return redirect("home");
     }
+
 
     public function get_ajouter_sport()
     {
@@ -94,3 +95,5 @@ class AdminActionController extends Controller
         DB::update("update utilisateurs set description=".$request->new_sport."where id=".$id);
         return redirect("home");
     }}
+
+

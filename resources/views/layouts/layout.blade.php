@@ -22,7 +22,8 @@
     a h1 span{
     font-style: italic !important;
     font-size: 1.3em;
-    color: #7e5757;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    padding: 2px;
     }
 
 </style>
@@ -44,8 +45,11 @@
               <a class="nav-link" href="/services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact">Contact</a>
-            </li>
+                <a class="nav-link" href="contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="get_login">Login</a>
+              </li>
           </ul>
         </div>
       </nav>
