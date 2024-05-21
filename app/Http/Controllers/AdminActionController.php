@@ -13,14 +13,16 @@ class AdminActionController extends Controller
 
     public function get_all_événement()
     {
-        return view("AdminActions.get_ajouter_événement");
+        $événements=Événement::all();
+        return view("AdminActions.get_all_événement",compact("événements"));
     }
 
 
 
     public function get_ajouter_événement()
     {
-        return view("AdminActions.get_ajouter_événement");
+        $sports=Sport::all();
+        return view("AdminActions.get_ajouter_événement",compact("sports"));
     }
 
     /**
@@ -95,5 +97,3 @@ class AdminActionController extends Controller
         DB::update("update utilisateurs set description=".$request->new_sport."where id=".$id);
         return redirect("home");
     }}
-
-

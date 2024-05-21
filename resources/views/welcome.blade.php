@@ -69,11 +69,12 @@ body{
     transition: all .3s ease;
 }
 .description{
-    color: #d86315;
-    font-size:1.5em;
+    color:black;
+    font-size:1em;
+    box-shadow:9px 9px 10px 1px black;
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding-top: 5px;
-
+    align-items:center;
 }
 .description h4{
     text-transform: uppercase;
@@ -110,7 +111,7 @@ input:checked + label .description {
     @extends('layouts.layout')
     @section("content")
 
-<h2> Welcome to our <span>C</span>entre </h2>
+
 
     <div class="wrapper">
         <div class="container">
@@ -120,11 +121,7 @@ input:checked + label .description {
                     <div class="icon">1</div>
                     <div class="description">
                         <h4>Musculation</h4>
-                        <p>To maximize the benefits of musculation, it's important to follow proper training techniques and principles.
-                             This includes using correct form during exercises,
-                             incorporating a balanced workout routine that targets all major muscle groups,
-                             and allowing for adequate rest and recovery between sessions. Nutrition also plays a crucial role,
-                             with sufficient protein intake being essential for muscle repair and growth.
+                        <p>pratiquer votre sports avec des nouvelles matériels
 
                         </p>
                     </div>
@@ -137,9 +134,7 @@ input:checked + label .description {
                     <div class="icon">2</div>
                     <div class="description">
                         <h4>Football</h4>
-                        <p> football is more than just a game—it is a global phenomenon that brings people together,
-                             promotes unity and diversity,
-                            and embodies the spirit of competition, camaraderie, and excellence..</p>
+                        <p> football is more than just a game</p>
                     </div>
                 </div>
             </label>
@@ -149,9 +144,7 @@ input:checked + label .description {
                     <div class="icon">3</div>
                     <div class="description">
                         <h4>image</h4>
-                        <p>tennis is a dynamic and engaging sport that combines athleticism, skill, strategy, and sportsmanship.
-                            Whether played casually with friends or competitively in tournaments,
-                            tennis provides a fulfilling and enjoyable experience for players and fans alike.</p>
+                        <p>tennis is a dynamic and engaging sport that combines athleticism,.</p>
                     </div>
                 </div>
             </label>
@@ -161,10 +154,7 @@ input:checked + label .description {
                     <div class="icon">4</div>
                     <div class="description">
                         <h4>Cricket</h4>
-                        <p> cricket is a dynamic and captivating sport that combines athleticism, strategy, and sportsmanship.
-                            Whether played at the grassroots level or on the international stage,
-                            cricket continues to inspire and unite people around the world,
-                            making it one of the most cherished and beloved sports globally.</p>
+                        <p> cricket is a dynamic and captivating sport.</p>
                     </div>
                 </div>
             </label>
@@ -174,9 +164,7 @@ input:checked + label .description {
                     <div class="icon">4</div>
                     <div class="description">
                         <h4> Natation </h4>
-                        <p>Are you ready to make a splash towards a healthier lifestyle?
-                            Look no further than our state-of-the-art Sports Center,
-                            where we offer top-notch facilities and expert guidance to help you achieve your fitness goals through natation (swimming).</p>
+                        <p>Are you ready to make a splash towards a healthier lifestyle?</p>
                     </div>
                 </div>
             </label>
