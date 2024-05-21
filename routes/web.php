@@ -36,9 +36,9 @@ Route::post('/modifier_événement',[AdminActionController::class ,'modifier_év
 
 
 //sport
-Route::post('/get_ajouter_sport',[AdminActionController::class ,'get_ajouter_sport']);
+Route::get('/get_ajouter_sport',[AdminActionController::class ,'get_ajouter_sport']);
 Route::post('/ajouter_sport',[AdminActionController::class ,'ajouter_sport']);
-Route::post('/get_modifier_sport',[AdminActionController::class ,'get_modifier_sport']);
+Route::get('/get_modifier_sport',[AdminActionController::class ,'get_modifier_sport']);
 Route::post('/modifier_sport',[AdminActionController::class ,'modifier_sport']);
 
 
