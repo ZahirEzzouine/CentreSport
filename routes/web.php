@@ -53,3 +53,7 @@ Route::get('/contact',[NavbarController::class ,'contact']);
 
 
 
+Route::get('/test',function(){
+    return view('AdminActions.get_ajouter_événement');
+});
+

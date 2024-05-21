@@ -88,6 +88,8 @@
     </style>
 </head>
 <body>
+    @extends('layouts.layout')
+    @section('content')
     <form action="">
         @csrf
         <div class="form-header">
@@ -98,9 +100,15 @@
         <input type="text" id="titre" name="titre" placeholder="Enter title">
         <label for="description">Description</label>
         <input type="text" id="description" name="description" placeholder="Enter description">
-        <label for="sport_id">Sport ID</label>
-        <input type="text" id="sport_id" name="sport_id" placeholder="Enter sport ID">
+        <select name="sport_id">
+            @foreach ($sports as $sport)
+            <option value="{{$sport->id}}">{{$sport->nom}}</option>
+            @endforeach
+        </select>
+
         <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
     </form>
+    @endsection
+
 </body>
 </html>
