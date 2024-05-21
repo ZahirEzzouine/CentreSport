@@ -12,8 +12,8 @@ class Inscriptionseeder extends Seeder
      */
     public function run(): void
     {
-       DB::create([
+        DB::create([
         
-       ]);
+        ]);
     }
 }
