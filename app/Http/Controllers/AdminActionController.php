@@ -53,7 +53,14 @@ class AdminActionController extends Controller
     public function modifier_événement(ModifierÉvénementRequest $request,$id)
     {
         DB::update("update utilisateurs set description=".$request->new_événement."where id=".$id);
-        return redirect("home");
+        return redirect("/");
+    }
+
+
+    public function supprimer_événement($id)
+    {
+        DB::delete("delete from événement where id=".$id);
+        return redirect("/");
     }
 
 
@@ -95,5 +102,11 @@ class AdminActionController extends Controller
     public function modifier_sport(ModifierÉvénementRequest $request,$id)
     {
         DB::update("update utilisateurs set description=".$request->new_sport."where id=".$id);
-        return redirect("home");
+        return redirect("/");
+    }
+
+    public function supprimer_sport($id)
+    {
+        DB::delete("delete from sport where id=".$id);
+        return redirect("/");
     }}
