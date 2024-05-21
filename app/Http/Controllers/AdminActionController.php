@@ -53,13 +53,20 @@ class AdminActionController extends Controller
     public function modifier_événement(ModifierÉvénementRequest $request,$id)
     {
         DB::update("update utilisateurs set description=".$request->new_événement."where id=".$id);
-        return redirect("home");
+        return redirect("/");
+    }
+
+
+    public function supprimer_événement($id)
+    {
+        DB::delete("delete from événement where id=".$id);
+        return redirect("/");
     }
 
 
     public function get_ajouter_sport()
     {
-        return view("sport.get_ajouter_sport");
+        return view("AdminActions.get_ajouter_sport");
     }
 
     /**
@@ -83,10 +90,10 @@ class AdminActionController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function get_modifier_sport($id)
+    public function get_modifier_sport(/*$id*/)
     {
-        $événement=Utilisateur::select("select * from utilisateurs where email =".$request->email);
-        return view("sport.get_modifier_sport",compact("sport"));
+        //$sport=Sport::find($id);
+    return view("AdminActions.get_modifier_sport"/*,compact("sport")*/);
     }
 
     /**
@@ -94,6 +101,23 @@ class AdminActionController extends Controller
      */
     public function modifier_sport(ModifierÉvénementRequest $request,$id)
     {
-        DB::update("update utilisateurs set description=".$request->new_sport."where id=".$id);
-        return redirect("home");
+        $request->validate([
+            "nom"=>"required|string"
+        ]);
+        if($request->file("image")){
+            $imageName=$request->nom.".".$request->image->extension();
+            //$imagePath=$request->file('image')->store(config('images.path'),'public');
+            $request->logo->move(public_path("images_sports"),$imageName);
+            DB::update("update sports set nom=".$request->nom."where id=".$id);
+        }
+        else{
+            DB::update("update sports set nom=".$request->nom."where id=".$id);
+        }
+        return redirect("/");
+    }
+
+    public function supprimer_sport($id)
+    {
+        DB::delete("delete from sport where id=".$id);
+        return redirect("/");
     }}
