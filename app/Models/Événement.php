@@ -13,5 +13,5 @@ class Événement extends Model
     public function get_sport(){
         return $this->belongsTo(Sport::class,'id');
     }
-    
+
 }

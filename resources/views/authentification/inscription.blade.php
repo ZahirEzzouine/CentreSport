@@ -29,14 +29,14 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 600px; /* Adjusted for more width */
+    max-width: 600px;
     text-align: center;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Added gap for spacing between rows */
+    gap: 20px;
 }
 
 h2 {
@@ -46,11 +46,11 @@ h2 {
 
 .input-row {
     display: flex;
-    gap: 20px; /* Added gap for spacing between columns */
+    gap: 20px;
 }
 
 .input-group {
-    flex: 1; /* Ensure equal width */
+    flex: 1; 
     text-align: left;
 }
 
