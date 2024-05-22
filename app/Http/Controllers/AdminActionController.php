@@ -34,7 +34,8 @@ class AdminActionController extends Controller
             "titre" => $request->titre,
             "description" => $request->description,
             "envoyer" => $request->envoyer,
-            "sport_id" => $request->sport_id
+            "sport_id" => $request->sport_id,
+            
         ]);
     }
 
@@ -46,6 +47,7 @@ class AdminActionController extends Controller
         $événement=Utilisateur::select("select * from utilisateurs where email =".$request->email);
         return view("AdminActions.get_modifier_événement",compact("événement"));
     }
+
 
     /**
      * Display the specified resource.

@@ -35,10 +35,6 @@
     transform: translateY(-30px) scale(0.9);
 }
 
-100%{
-
-
-}
 
 }
 
@@ -99,7 +95,7 @@ button:hover {
                 <input type="text" id="description" name="description" placeholder="Enter description">
             </div>
 
-            <button type="submit">Update</button>
+            <button type="submit" name="modifier_événement">Update</button>
         </form>
     </div>
 </body>
