@@ -24,7 +24,7 @@ body {
 }
 
 .form-container {
-    background-color: #fff;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);

@@ -21,7 +21,7 @@
         margin: 30px 0;
     }
     form{
-        background-image: linear-gradient( 109.6deg,  rgba(15,2,2,1) 11.2%, rgba(36,163,190,1) 91.1% );
+        background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
         margin: 100px auto;
         width: 350px;
         border: 1px solid black;
@@ -71,11 +71,10 @@
 </style>
 <body>
 
-
+    <div class="form-container">
     <form action="" class="form">
         @csrf
-      <h1>Login</h1> <hr>
-
+        <h1>Login</h1> <hr>
         <label for="email">Email</label>
         <div class="login">
             <i class="fa fa-user"></i>
@@ -90,6 +89,7 @@
         <a href="get_inscription" >Inscrire</a>
         <a href="forgot_password" class="a">Mot de passe oublier </a>
     </form>
+    </div>
 
 
 
