@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inscription</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+@extends('layouts.layout')
+@section('content')
+
+
 <style>
     * {
     margin: 0;
@@ -14,7 +9,7 @@
     box-sizing: border-box;
 }
 
-body {
+.content {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     display: flex;
@@ -50,7 +45,7 @@ h2 {
 }
 
 .input-group {
-    flex: 1; 
+    flex: 1;
     text-align: left;
 }
 
@@ -87,7 +82,7 @@ button:hover {
 }
 
 </style>
-<body>
+<div class="content">
     <div class="form-container">
         <form action="" class="form">
             <h2>Inscription</h2>
@@ -120,5 +115,6 @@ button:hover {
             <button type="submit">S'inscrire</button>
         </form>
     </div>
-</body>
-</html>
+</div>
+
+@endsection

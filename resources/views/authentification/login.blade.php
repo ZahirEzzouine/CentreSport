@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+@extends('layouts.layout')
+@section('content')
+
 <style>
     *{
         margin: 0;
         padding: 0;
     }
-    h1{
+    .h1{
         text-align: center;
         font-size: 50px;
         margin: 5px;
@@ -88,10 +83,9 @@
         <input type="password" name="password" placeholder="password"></div>
         <button class="button">Submit</button>
         <a href="get_inscription" >Inscrire</a>
-        <a href="forgot_password" class="a">Mot de passe oublier </a>
+        <a href="" class="a">Mot de passe oublier </a>
     </form>
 
 
 
-</body>
-</html>
+    @endsection

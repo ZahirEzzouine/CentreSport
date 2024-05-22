@@ -12,14 +12,15 @@
         margin: 0;
         padding: 0;
     }
-    body {
+    .body {
     font-family: Arial, sans-serif;
-    background-color: #3b3bf0;
+    background:linear-gradient(45deg, rgb(74, 243, 164), rgb(33, 235, 77));
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    background: ligr
 }
 
 .container {
