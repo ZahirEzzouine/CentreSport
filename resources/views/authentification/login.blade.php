@@ -83,6 +83,7 @@
         <button class="button">Submit</button>
         <a href="get_inscription" >Inscrire</a>
         <a href="" class="a">Mot de passe oublier </a>
+
     </form>
     </div>
 

@@ -26,7 +26,7 @@ class AuthentificationController extends Controller
     {
         return view("authentification.inscription");
     }
-
+    
     /**
      * vérifier le login.
      */
