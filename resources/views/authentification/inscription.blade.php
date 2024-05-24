@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 @extends("layouts.layout")
 @section("content")
 <!DOCTYPE html>
@@ -10,12 +10,8 @@
     <title>Inscription</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-=======
-@extends('layouts.layout')
-@section('content')
 
 
->>>>>>> 841f7b910708651ef28066677e8857d172f4c319
 <style>
     * {
     margin: 0;
@@ -130,12 +126,6 @@ button:hover {
             <button type="submit">S'inscrire</button>
         </form>
     </div>
-<<<<<<< HEAD
-</body>
-</html>
-@endsection
-=======
 </div>
 
 @endsection
->>>>>>> 841f7b910708651ef28066677e8857d172f4c319
