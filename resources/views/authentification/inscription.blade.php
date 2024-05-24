@@ -1,3 +1,5 @@
+@extends("layouts.layout")
+@section("content")
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +33,7 @@ body {
     width: 100%;
     max-width: 600px;
     text-align: center;
+    margin-top:6em;
 }
 
 .form {
@@ -112,7 +115,7 @@ button:hover {
                 </div>
             </div>
             <div class="input-row">
-               <div class="input-group">
+                <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email"  name="email" required>
                 </div>
@@ -122,3 +125,4 @@ button:hover {
     </div>
 </body>
 </html>
+@endsection

@@ -81,7 +81,7 @@
                     <form action="/ajouter_sport" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="nom_sport">
-                            <input type="text" name="nom" placeholder="Nom de sport" value="{{old("nom",$sport.nom)}}"/>
+                            <input type="text" name="nom" placeholder="Nom de sport" />
                             <span class="erreur_zone"></span>
                         </div>
                         <div class="image_sport" id="image_sport">

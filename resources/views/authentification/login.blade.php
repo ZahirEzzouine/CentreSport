@@ -1,3 +1,5 @@
+@extends("layouts.layout")
+@section("content")
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
+    nav{
+    }
     *{
         margin: 0;
         padding: 0;
     }
-    h1{
+    .form_content h1{
         text-align: center;
         font-size: 50px;
         margin: 5px;
+        color: black;
     }
     hr{
         width: 100%;
@@ -22,12 +27,13 @@
     }
     form{
         background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-        margin: 100px auto;
-        width: 350px;
+        margin: 5.5em auto;
+        width: 23em;
         border: 1px solid black;
-        padding: 60px;
+        padding: 20px;
         border-radius: 10px;
         color:white;
+        height: 25em;
     }
     form label{
         font-family:'Times New Roman', Times, serif;
@@ -44,37 +50,34 @@
         color: white;
         border: transparent;
         background-color: #007BFF;
-
         transition: .9s;
     }
     button:hover{
         background-color: rgb(27, 27, 124);
     }
-
-    .a{
-        margin: 15px;
-    }
-    a{
-        text-decoration:none;
-        color:white;
-    }
-    i{
+    form .login i{
         z-index: 100 !important;
         color:black !important;
         position:relative;
-        left:20em;
-        top:1.5em;
+        left:18.5em;
+        top:1.8em;
     }
     .login{
         display:flex;
+    }.get_mot_de_passe_oublier{
+        position: relative;
+        bottom: 0.7em;
+        text-decoration:none;
+        color:rgb(55, 0, 255);
+        left: 5em;
+        font-weight: 500;
     }
 </style>
 <body>
-
-    <div class="form-container">
+    <div class="form-content">
+        <h1>Login</h1> <hr>
     <form action="" class="form">
         @csrf
-        <h1>Login</h1> <hr>
         <label for="email">Email</label>
         <div class="login">
             <i class="fa fa-user"></i>
@@ -82,16 +85,16 @@
     </div>
         <br>
         <label for="telephone"  >Password</label>
-        <div class="login">
+    <div class="login">
         <i class="fa fa-lock"></i>
-        <input type="password" name="password" placeholder="password"></div>
+        <input type="password" name="password" placeholder="password">
+    </div>
+        <a href="get_mot_de_passe_oublier" class="get_mot_de_passe_oublier">Mot de passe oublier </a>
         <button class="button">Submit</button>
-        <a href="get_inscription" >Inscrire</a>
-        <a href="forgot_password" class="a">Mot de passe oublier </a>
+
     </form>
     </div>
-
-
-
 </body>
 </html>
+
+@endsection
