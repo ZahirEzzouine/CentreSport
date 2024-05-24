@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Événement;
+use App\Models\Utilisateur;
+use App\Models\Sport;
+use App\Models\Inscription;
 
 class AdminActionController extends Controller
 {
