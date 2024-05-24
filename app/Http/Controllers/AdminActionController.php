@@ -35,7 +35,7 @@ class AdminActionController extends Controller
             "description" => $request->description,
             "envoyer" => $request->envoyer,
             "sport_id" => $request->sport_id,
-            
+
         ]);
     }
 

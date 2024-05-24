@@ -33,13 +33,7 @@
             color: #fff;
         }
 
-        table tbody tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
 
-        table tbody tr:hover {
-            background-color: #e2e2e2;
-        }
 
         table th {
             background-color: #007bff;
@@ -53,7 +47,7 @@
     </style>
 </head>
 <body>
-    
+
     <table>
         <thead>
             <tr>
