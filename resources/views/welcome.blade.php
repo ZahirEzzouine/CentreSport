@@ -19,11 +19,21 @@
     .container0 .contain-image img{
     width: 100%;
     bottom: 0%;
+    opacity: 0.7;
     position: fixed;
 }
     .container0 .contain-image h1{
     color:  #38f9d7 ;
     background-position: -200px 0;
+
+    background-image: linear-gradient(transparent,black);
+    /*hna lc olor dyal h1 hhhh
+    jarab hada
+        background-image: linear-gradient( 179deg,  rgb(28, 27, 27) 9.2%, rgb(135, 22, 22) 103.9% );
+
+     */
+    -webkit-background-clip: text;
+    top: 50%;
     -webkit-text-stroke: 2px rgb(255, 255, 255);
     -webkit-background-clip: text ;
     top: 45%;
