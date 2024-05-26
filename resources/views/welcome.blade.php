@@ -18,7 +18,8 @@
     }
 .container0 .contain-image img{
     width: 100%;
-    opacity: .7;
+  
+    bottom: 0%;
     position: fixed;
 }
 .container0 .contain-image h1{
@@ -158,7 +159,7 @@ input:checked + label .description {
 
     <div class="container0">
         <div class="contain-image">
-            <img src="images/tennis.jpg">
+            <img src="images/our_centre.jpg">
             <h1>Welcom to our <br> centre</h1>
         </div>
     </div>
