@@ -23,16 +23,11 @@
     position: fixed;
 }
 .container0 .contain-image h1{
-    color: transparent;
+    color:  #38f9d7 ;
     background-position: -200px 0;
-    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-     /*hna lc olor dyal h1 hhhh
-     jarab hada
-        background-image: linear-gradient( 179deg,  rgb(28, 27, 27) 9.2%, rgb(135, 22, 22) 103.9% );
-
-     */
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
     -webkit-background-clip: text ;
-    top: 50%;
+    top: 45%;
     font: 10em sans-serif;
     position: absolute;
     text-align: center;
@@ -160,7 +155,7 @@ input:checked + label .description {
     <div class="container0">
         <div class="contain-image">
             <img src="images/our_centre.jpg">
-            <h1>Welcom to our <br> centre</h1>
+            <h1>Welcome to our <br> centre</h1>
         </div>
     </div>
     <div class="wrapper">
