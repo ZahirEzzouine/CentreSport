@@ -23,10 +23,16 @@
 }
 .container0 .contain-image h1{
     color: transparent;
-    -webkit-text-stroke: 3px  rgb(0, 0, 0);
     background-position: -200px 0;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+     /*hna lc olor dyal h1 hhhh
+     jarab hada
+         background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+
+     */
+    -webkit-background-clip: text ;
     top: 50%;
-    font: 9em sans-serif;
+    font: 10em sans-serif;
     position: absolute;
     text-align: center;
     width: 100%;
