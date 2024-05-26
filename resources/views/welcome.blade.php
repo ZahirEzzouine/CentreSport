@@ -23,7 +23,8 @@
 }
 .container0 .contain-image h1{
     color: transparent;
-    -webkit-text-stroke: 3px  rgb(0, 255, 98);
+    -webkit-text-stroke: 3px  rgb(0, 0, 0);
+    background-position: -200px 0;
     top: 50%;
     font: 9em sans-serif;
     position: absolute;
@@ -152,7 +153,7 @@ input:checked + label .description {
     <div class="container0">
         <div class="contain-image">
             <img src="images/tennis.jpg">
-            <h1>Welcom to our centre <br> de sport </h1>
+            <h1>Welcom to our <br> centre</h1>
         </div>
     </div>
     <div class="wrapper">
