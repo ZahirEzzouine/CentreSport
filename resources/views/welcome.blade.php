@@ -22,7 +22,8 @@
     position: fixed;
 }
 .container0 .contain-image h1{
-    color: #f4fabc;
+    color: transparent;
+    -webkit-text-stroke: 3px  rgb(0, 255, 98);
     top: 50%;
     font: 9em sans-serif;
     position: absolute;
