@@ -1,36 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>À propos de nous</title>
   <style>
-    .hero-section {
-      background-image: url('background-image.jpg');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      padding: 100px 0;
-      text-align: center;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+    .container-about {
+        max-width: 800px;
+        margin: 50px auto;
+        padding:  100px;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .container-about h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+    .container-about p {
+        margin-bottom: 20px;
+        color: #666;
     }
   </style>
 </head>
 <body>
-
 @extends('layouts.layout')
-@section("content")
-  <section class="container">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
-        <h2 class="mb-4">About our centre</h2>
-<p>Welcome to  Center, where passion meets performance! Established in 2024, we pride ourselves on being the premier destination for fitness enthusiasts, athletes, and sports lovers alike. Our state-of-the-art facilities offer a dynamic environment where individuals of all ages and abilities can pursue their fitness goals and engage in a variety of sporting activities.
-    At Center, we believe in the power of sport to transform lives and build communities. Whether you're looking to improve your strength, enhance your endurance, or simply enjoy the thrill of competition, our dedicated team of coaches and instructors are here to support you every step of the way.</p>
-</div>
-    </div>
-  </section>
-@endsection
+@section('content')
 
+
+<div class="container-about">
+    <h2>À propos de nous</h2>
+    <p>Bienvenue dans notre centre, où nous nous engageons à promouvoir la santé,
+         la forme physique et le bien-être de notre communauté.
+         Nos installations de pointe et notre personnel
+         expérimenté offrent un environnement inclusif pour les athlètes de tous niveaux,
+          des débutants aux professionnels.</p>
+  </div>
+
+@endsection
 </body>
 </html>
-
