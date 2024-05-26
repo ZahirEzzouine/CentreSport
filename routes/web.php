@@ -9,8 +9,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
 //authentification
 
 Route::get('/get_login',[AuthentificationController::class , 'get_login']);
@@ -22,18 +20,13 @@ Route::post('/new_password',[AuthentificationController::class ],'new_password')
 
 
 
-
 //événement
 
 Route::get('/get_ajouter_événement',[AdminActionController::class ,'get_ajouter_événement']);
 Route::get('/get_all_événement',[AdminActionController::class ,'get_all_événement']);
 Route::post('/ajouter_événement',[AdminActionController::class ,'ajouter_événement']);
-//Route::get('/get_modifier_événement',[AdminActionController::class ,'get_modifier_événement']);
+Route::get('/get_modifier_événement',[AdminActionController::class ,'get_modifier_événement']);
 Route::post('/modifier_événement',[AdminActionController::class ,'modifier_événement']);
-
-Route::get('/test',function(){
-    return view('AdminActions.');
-});
 
 
 

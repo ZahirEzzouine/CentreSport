@@ -53,7 +53,7 @@
     box-shadow: 1px 1px 100px 1px rgb(156, 136, 136);
     border-radius: 50px;
     border-bottom: solid rgb(255, 255, 255) 1px;
-    padding-bottom:2px; 
+    padding-bottom:2px;
     padding-left: 5px;
     padding-right: 5px;
   }

@@ -8,19 +8,55 @@
 </head>
 
 <style>
-
-
-body{
-    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
-    height: 100vh;
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+    }
+.container0 .contain-image img{
+    width: 100%;
+    opacity: .7;
+    position: fixed;
 }
+.container0 .contain-image h1{
+    color: #f4fabc;
+    top: 50%;
+    font: 9em sans-serif;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+    typing 2s steps(17),
+    cursor 2s step-end infinite alternate;
+}
+@keyframes cursor{
+    50%{border-color:transparent }
+}
+@keyframes typing{
+    from{width: 0}
+}
+
+
+
+
+
+
 .wrapper{
-    width:100% ;
-    height: 60%;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: absolute;
+    width:100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 900px
+
+
 }
 .container{
     height: 400px;
@@ -112,7 +148,12 @@ input:checked + label .description {
     @section("content")
 
 
-
+    <div class="container0">
+        <div class="contain-image">
+            <img src="images/tennis.jpg">
+            <h1>Welcom to our centre <br> de sport </h1>
+        </div>
+    </div>
     <div class="wrapper">
         <div class="container">
             <input type="radio" name="slide" id="c1" checked>
@@ -171,6 +212,12 @@ input:checked + label .description {
         </div>
 
     </div>
+
+    </div>
+
+
+
+
 @endsection
 </body>
 </html>
