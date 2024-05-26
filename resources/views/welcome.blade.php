@@ -16,29 +16,45 @@
     body{
         height: 100vh;
     }
-.container0 .contain-image img{
+    .container0 .contain-image img{
     width: 100%;
+<<<<<<< HEAD
     opacity: .7;
     bottom: 0%;
+=======
+    bottom: 0%;
+    opacity: 0.7;
+>>>>>>> 32a7bbceafa48b325106717bf93548fce3755991
     position: fixed;
 }
-.container0 .contain-image h1{
+    .container0 .contain-image h1{
     color:  #38f9d7 ;
     background-position: -200px 0;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 32a7bbceafa48b325106717bf93548fce3755991
     background-image: linear-gradient(transparent,black);
-     /*hna lc olor dyal h1 hhhh
-     jarab hada
+    /*hna lc olor dyal h1 hhhh
+    jarab hada
         background-image: linear-gradient( 179deg,  rgb(28, 27, 27) 9.2%, rgb(135, 22, 22) 103.9% );
 
      */
     -webkit-background-clip: text;
     top: 50%;
+<<<<<<< HEAD
 
     -webkit-text-stroke: 2px rgb(255, 255, 255);
     -webkit-background-clip: text ;
     top: 45%;
     font: 8em sans-serif;
     font-weight: bolder;
+=======
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    -webkit-background-clip: text ;
+    top: 45%;
+    font: 10em sans-serif;
+>>>>>>> 32a7bbceafa48b325106717bf93548fce3755991
     position: absolute;
     text-align: center;
     width: 100%;
@@ -173,7 +189,7 @@ input:checked + label .description {
             <input type="radio" name="slide" id="c1" checked>
             <label for="c1" class="card">
                 <div class="row">
-                    <div class="icon">1</div>
+                    <div class="icon">5</div>
                     <div class="description">
                         <h4>Musculation</h4>
                         <p>pratiquer votre sports avec des nouvelles matériels
@@ -186,7 +202,7 @@ input:checked + label .description {
             <label for="c2" class="card">
 
                 <div class="row">
-                    <div class="icon">2</div>
+                    <div class="icon">4</div>
                     <div class="description">
                         <h4>Football</h4>
                         <p> football is more than just a game</p>
@@ -206,7 +222,7 @@ input:checked + label .description {
             <input type="radio" name="slide" id="c4" checked>
             <label for="c4" class="card">
                 <div class="row">
-                    <div class="icon">4</div>
+                    <div class="icon">2</div>
                     <div class="description">
                         <h4>Cricket</h4>
                         <p> cricket is a dynamic and captivating sport.</p>
@@ -216,7 +232,7 @@ input:checked + label .description {
             <input type="radio" name="slide" id="c5" checked>
             <label for="c5" class="card">
                 <div class="row">
-                    <div class="icon">4</div>
+                    <div class="icon">1</div>
                     <div class="description">
                         <h4> Natation </h4>
                         <p>Are you ready to make a splash towards a healthier lifestyle?</p>
