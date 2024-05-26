@@ -16,13 +16,12 @@
     body{
         height: 100vh;
     }
-.container0 .contain-image img{
+    .container0 .contain-image img{
     width: 100%;
-  
     bottom: 0%;
     position: fixed;
 }
-.container0 .contain-image h1{
+    .container0 .contain-image h1{
     color:  #38f9d7 ;
     background-position: -200px 0;
     -webkit-text-stroke: 2px rgb(255, 255, 255);
@@ -163,7 +162,7 @@ input:checked + label .description {
             <input type="radio" name="slide" id="c1" checked>
             <label for="c1" class="card">
                 <div class="row">
-                    <div class="icon">1</div>
+                    <div class="icon">5</div>
                     <div class="description">
                         <h4>Musculation</h4>
                         <p>pratiquer votre sports avec des nouvelles matériels
@@ -176,7 +175,7 @@ input:checked + label .description {
             <label for="c2" class="card">
 
                 <div class="row">
-                    <div class="icon">2</div>
+                    <div class="icon">4</div>
                     <div class="description">
                         <h4>Football</h4>
                         <p> football is more than just a game</p>
@@ -196,7 +195,7 @@ input:checked + label .description {
             <input type="radio" name="slide" id="c4" checked>
             <label for="c4" class="card">
                 <div class="row">
-                    <div class="icon">4</div>
+                    <div class="icon">2</div>
                     <div class="description">
                         <h4>Cricket</h4>
                         <p> cricket is a dynamic and captivating sport.</p>
@@ -206,7 +205,7 @@ input:checked + label .description {
             <input type="radio" name="slide" id="c5" checked>
             <label for="c5" class="card">
                 <div class="row">
-                    <div class="icon">4</div>
+                    <div class="icon">1</div>
                     <div class="description">
                         <h4> Natation </h4>
                         <p>Are you ready to make a splash towards a healthier lifestyle?</p>
