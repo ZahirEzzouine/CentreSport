@@ -27,7 +27,7 @@
     background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
      /*hna lc olor dyal h1 hhhh
      jarab hada
-         background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+        background-image: linear-gradient( 179deg,  rgb(28, 27, 27) 9.2%, rgb(135, 22, 22) 103.9% );
 
      */
     -webkit-background-clip: text ;
