@@ -16,8 +16,9 @@
         background-color: #f4f4f4;
     }
     .container-about {
+
         max-width: 800px;
-        margin: 50px auto;
+        margin: 110px auto;
         padding: 50px;
         text-align: center;
         background-color: #fff;
