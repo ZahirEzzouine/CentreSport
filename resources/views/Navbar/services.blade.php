@@ -8,23 +8,20 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    .football{
+    .football img{
         height: 15em;
         width: 20em;
-        background-size: cover;
-        background-image: url('images/img.jpg.avif')
     }
-    .fitness{
+    .fitness img{
         height: 15em;
         width: 20em;
-        background-size: cover;
-        background-image: url('images/fitness.jpg')
     }
-    .tennis{
+    .tennis img{
         height: 15em;
-        width: 20em;
-        background-size: cover;
-        background-image: url('images/tennis.jpg')
+        width: 100%;
+    }
+    .content_service{
+      margin-top: 10px !important;
     }
   </style>
 </head>
@@ -42,45 +39,19 @@
   </section>
 
   <!-- Services Section -->
-  <section class="container">
+  <section class="container content_service">
 
     <div class="row">
-        <div class="card col-md-4">
-            <div class="card-header football">
-
-            </div>
-            <h4 class="card-title">Personal Training Sessions:</h4>
-            <p class="p">
-                Our personalized training sessions provide you with individualized attention and tailored workout plans to help you achieve your fitness goals effectively.
-                Whether you're looking to lose weight, build muscle, improve athletic performance,
-                or enhance overall health, our certified personal trainers are here to guide and support you every step of the way.
-                With one-on-one coaching, personalized exercise routines, and ongoing motivation,
-                you'll see real results and progress towards a healthier, stronger you</p>
-          </div>
-
-
-
-        <div class="card col-md-4 ">
-          <div class="card">
-            <div class="card-header fitness"></div>
-            <h4 class="card-title"> Group Fitness Classes:
-            </h4>
-            <p class="card-text">Join our energizing group fitness classes led by experienced instructors who will inspire and challenge you to push your limits. From high-intensity interval training (HIIT) and circuit workouts to yoga, pilates, and spinning, we offer a diverse range of classes to suit all fitness levels and interests. Whether you prefer the camaraderie of group workouts or thrive on the motivation of a structured class environment, our group fitness programs provide a fun and effective way to get in shape, stay active, and have fun with like-minded individuals.</p>
-          </div>
+      @foreach ($services as $service)
+      <div class="card col-md-4">
+        <div class="card-header football">
+          <img src="{{$service->image}}" alt="">
         </div>
-
-
-          <div class="card col-md-4">
-            <div class="card-header tennis"></div>
-            <h4 class="card-title"> Tennis:
-            </h4>
-            <p class="card-text">Sharpen your skills and take your game to the next level with our expert sports coaching clinics. Led by experienced coaches and athletes,
-                our clinics cover a variety of sports disciplines, including basketball, soccer, tennis, swimming, and more.
-                 Whether you're a beginner looking to learn the fundamentals or an experienced athlete aiming for elite performance,
-                 our clinics offer valuable insights, technical instruction, and strategic training to help you excel in your chosen sport. With small class sizes and personalized feedback,
-                you'll receive the attention and guidance you need to reach your full potential and achieve success on the field, court, or pool.</p>
-
-          </div>
+        <h4 class="card-title">{{$service->titre}}</h4>
+        <p class="card-body">
+          {{$service->description}}
+        </div>
+      @endforeach
         </div>
   </section>
 

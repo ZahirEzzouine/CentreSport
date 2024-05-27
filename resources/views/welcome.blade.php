@@ -11,29 +11,21 @@
     *{
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
     }
     body{
         height: 100vh;
     }
     .container0 .contain-image img{
     width: 100%;
-<<<<<<< HEAD
     opacity: .7;
     bottom: 0%;
-=======
     bottom: 0%;
     opacity: 0.7;
->>>>>>> 32a7bbceafa48b325106717bf93548fce3755991
     position: fixed;
 }
     .container0 .contain-image h1{
     color:  #38f9d7 ;
     background-position: -200px 0;
-<<<<<<< HEAD
-=======
-
->>>>>>> 32a7bbceafa48b325106717bf93548fce3755991
     background-image: linear-gradient(transparent,black);
     /*hna lc olor dyal h1 hhhh
     jarab hada
@@ -42,19 +34,15 @@
      */
     -webkit-background-clip: text;
     top: 50%;
-<<<<<<< HEAD
 
     -webkit-text-stroke: 2px rgb(255, 255, 255);
     -webkit-background-clip: text ;
     top: 45%;
     font: 8em sans-serif;
-    font-weight: bolder;
-=======
     -webkit-text-stroke: 2px rgb(255, 255, 255);
     -webkit-background-clip: text ;
     top: 45%;
     font: 10em sans-serif;
->>>>>>> 32a7bbceafa48b325106717bf93548fce3755991
     position: absolute;
     text-align: center;
     width: 100%;
@@ -85,8 +73,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 900px
-
-
 }
 .container{
     height: 400px;
@@ -171,6 +157,15 @@ input:checked + label .description {
 .card[for='c5']{
     background-image: url('images/natation.avif');
 }
+.container0{
+    
+    margin-top:15em;
+}
+.footer_container{
+    position: absolute;
+    top:105em;
+    width: 100% !important;
+}
 </style>
 <body>
 
@@ -181,7 +176,7 @@ input:checked + label .description {
     <div class="container0">
         <div class="contain-image">
             <img src="images/our_centre.jpg">
-            <h1>Bienvenue dans notre <br> centre.</h1>
+            <h1>Bienvenue dans <br>notre centre</h1>
         </div>
     </div>
     <div class="wrapper">
@@ -243,11 +238,22 @@ input:checked + label .description {
 
     </div>
 
-    </div>
 
 
 
 
 @endsection
+<div class=" footer_container">
+    <div class="icone_container">
+        <span>Suivez notre centre</span>
+        <a href=""><i class="fa fa-whatsapp"></i></a>
+        <a href=""><i class="fa fa-facebook"></i></a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-youtube"></i></a>
+    </div>
+    <div class="name"><span>ZAHIR EZZOUINE</span><span>ZAKARIA BENHAMADI</span></div>
+  </div>
+  
 </body>
 </html>

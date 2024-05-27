@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
     body{
@@ -57,6 +57,47 @@
     padding-left: 5px;
     padding-right: 5px;
   }
+
+
+  /*footer*/
+  .icone_container a i{
+    color:white;
+    font-size: larger;
+    margin-right: 
+}
+.footer_container{
+    z-index: 100 !important;
+    bottom: 0;
+    height: 6em;
+    margin-top: 4em;
+    background-image: linear-gradient( 179deg,  rgb(28, 27, 27) 9.2%, rgb(135, 22, 22) 103.9% );
+}
+.footer_container div{
+    margin-left: 5em;
+    margin-top: 1em;
+}
+.footer_container .icone_container::after{
+    content:" ";
+    position: absolute;
+    border: white 1px solid;
+    width: 92%;
+    display: block;
+}
+.footer_container div span{
+    margin-right: 2em;
+    color:white;
+    font-size: small;
+}
+.footer_container .name span{
+    font-size: large;
+    margin-left: 2em;
+}
+.footer_container .name{
+    margin-left: 52em;
+}
+.card_container{
+    width: 20em;
+}
 </style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark ">
@@ -88,3 +129,15 @@
       <div class="margin"></div>
 
 @yield('content')
+
+<div class=" footer_container">
+  <div class="icone_container">
+      <span>Suivez notre centre</span>
+      <a href=""><i class="fa fa-whatsapp"></i></a>
+      <a href=""><i class="fa fa-facebook"></i></a>
+      <a href=""><i class="fa fa-instagram"></i></a>
+      <a href=""><i class="fa fa-twitter"></i></a>
+      <a href=""><i class="fa fa-youtube"></i></a>
+  </div>
+  <div class="name"><span>ZAHIR EZZOUINE</span><span>ZAKARIA BENHAMADI</span></div>
+</div>
