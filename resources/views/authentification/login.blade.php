@@ -76,7 +76,7 @@
 <body>
     <div class="form-content">
         <h1>Login</h1> <hr>
-    <form action="" class="form">
+    <form action="check_login" class="form" method="POST">
         @csrf
         <label for="email">Email</label>
         <div class="login">

@@ -90,7 +90,8 @@ button:hover {
 </style>
 <div class="content">
     <div class="form-container">
-        <form action="" class="form">
+        <form action="store_inscription" class="form" method="POST">
+            @csrf
             <h2>Inscription</h2>
             <div class="input-row">
                 <div class="input-group">
