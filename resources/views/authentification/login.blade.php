@@ -76,18 +76,18 @@
 <body>
     <div class="form-content">
         <h1>Login</h1> <hr>
-    <form action="" class="form">
+    <form action="check_login" class="form" method="POST">
         @csrf
         <label for="email">Email</label>
         <div class="login">
             <i class="fa fa-user"></i>
-        <input type="email" name="email" placeholder="E-mail">
+        <input type="email" name="email" placeholder="E-mail"  required>
     </div>
         <br>
         <label for="telephone"  >Password</label>
     <div class="login">
         <i class="fa fa-lock"></i>
-        <input type="password" name="password" placeholder="password">
+        <input type="password" name="password" placeholder="password" required>
     </div>
         <a href="get_mot_de_passe_oublier" class="get_mot_de_passe_oublier">Mot de passe oublier </a>
         <button class="button">Submit</button>
