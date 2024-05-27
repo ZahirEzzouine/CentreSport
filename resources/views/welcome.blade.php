@@ -18,22 +18,18 @@
     }
     .container0 .contain-image img{
     width: 100%;
-<<<<<<< HEAD
+
     opacity: .7;
     bottom: 0%;
-=======
+
     bottom: 0%;
     opacity: 0.7;
->>>>>>> 32a7bbceafa48b325106717bf93548fce3755991
+
     position: fixed;
 }
     .container0 .contain-image h1{
     color:  #38f9d7 ;
     background-position: -200px 0;
-<<<<<<< HEAD
-=======
-
->>>>>>> 32a7bbceafa48b325106717bf93548fce3755991
     background-image: linear-gradient(transparent,black);
     /*hna lc olor dyal h1 hhhh
     jarab hada
@@ -42,19 +38,15 @@
      */
     -webkit-background-clip: text;
     top: 50%;
-<<<<<<< HEAD
 
     -webkit-text-stroke: 2px rgb(255, 255, 255);
     -webkit-background-clip: text ;
     top: 45%;
-    font: 8em sans-serif;
+    font:7em sans-serif;
     font-weight: bolder;
-=======
     -webkit-text-stroke: 2px rgb(255, 255, 255);
     -webkit-background-clip: text ;
     top: 45%;
-    font: 10em sans-serif;
->>>>>>> 32a7bbceafa48b325106717bf93548fce3755991
     position: absolute;
     text-align: center;
     width: 100%;
@@ -139,7 +131,7 @@
     font-size:1em;
     box-shadow:9px 9px 10px 1px black;
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding-top: 5px;
+    padding-top: 10px;
     align-items:center;
 }
 .description h4{
@@ -150,7 +142,7 @@ input{
 
 }
 input:checked + label {
-    width:600px  ;
+    width:700px  ;
 }
 input:checked + label .description {
     opacity: 1 !important;
@@ -193,7 +185,7 @@ input:checked + label .description {
                     <div class="description">
                         <h4>Musculation</h4>
                         <p>pratiquer votre sports avec des nouvelles matériels
-
+                            <a href="service">For more Details</a>
                         </p>
                     </div>
                 </div>
@@ -205,7 +197,9 @@ input:checked + label .description {
                     <div class="icon">4</div>
                     <div class="description">
                         <h4>Football</h4>
-                        <p> football is more than just a game</p>
+                        <p> football is more than just a game
+                            <a href="service">For more Details</a>
+                        </p>
                     </div>
                 </div>
             </label>
@@ -215,7 +209,9 @@ input:checked + label .description {
                     <div class="icon">3</div>
                     <div class="description">
                         <h4>image</h4>
-                        <p>tennis is a dynamic and engaging sport that combines athleticism,.</p>
+                        <p>tennis is a dynamic and engaging sport <br>
+                            <a href="service">For more Details</a>.</p>
+
                     </div>
                 </div>
             </label>
@@ -225,7 +221,8 @@ input:checked + label .description {
                     <div class="icon">2</div>
                     <div class="description">
                         <h4>Cricket</h4>
-                        <p> cricket is a dynamic and captivating sport.</p>
+                        <p> cricket is a dynamic and captivating sport</p>
+                        <a href="service">For more Details</a>
                     </div>
                 </div>
             </label>
@@ -235,7 +232,8 @@ input:checked + label .description {
                     <div class="icon">1</div>
                     <div class="description">
                         <h4> Natation </h4>
-                        <p>Are you ready to make a splash towards a healthier lifestyle?</p>
+                        <p>Are you ready to make a splash ?</p>
+                        <a href="service">For more Details</a>
                     </div>
                 </div>
             </label>
