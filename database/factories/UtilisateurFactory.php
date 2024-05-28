@@ -20,7 +20,7 @@ class UtilisateurFactory extends Factory
         return [
             "nom" => "zakaria",
             "email" =>"zz@gmail.com",
-            "password" =>"zahir",
+            "password" =>Hash::make("zakaria"),
             "num_phone" =>"123456",
             "age" =>"20",
             "code_de_recuperation" =>"12345",

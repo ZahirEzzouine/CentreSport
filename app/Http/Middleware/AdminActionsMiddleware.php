@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class AdminActionsMiddleware
+class AdminActionsMiddleware 
 {
     /**
      * Handle an incoming request.
@@ -16,11 +16,8 @@ class AdminActionsMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         $utilisateur=auth()->user();
-        if(auth()->user()){
-            return true;
-            
-        }else{
-            return to_route("auth");
+        if(!auth()->user()){
+            return to_route("get_login");
         }
         return $next($request);
     }

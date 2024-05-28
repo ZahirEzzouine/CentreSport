@@ -9,7 +9,6 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f9;
-            display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -44,21 +43,29 @@
         table tr {
             border-bottom: 1px solid #ddd;
         }
+
+        td a{
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 
     <table>
-        <thead>
             <tr>
-                <th>Titre</th>
-                <th>Description</th>
-                <th>Sport ID</th>
+                <th>Sport</th>
+                <th>Image</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
             </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
+            @foreach ($sports as $sport)
+            <tr>
+                <td>{{$sport->nom}}</td>
+                <td><img src="/images/{{$sport->image}}" alt=""></td>
+                <td><a href="{{'get_modifier_sport/'.$sport->id}}">Modifier</a></td>
+                <td><a href="{{'get_supprimer_sport/'.$sport->id}}">Supprimer</a></td>
+            </tr>
+            @endforeach
     </table>
 </body>
 </html>

@@ -24,13 +24,13 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);*/
         Utilisateur::factory(3)->create();
-        Sport::factory(3)->create();
+        //Sport::factory(3)->create();
         //Événement::factory(3)->create();
-        Inscription::create([
-            "date_inscription"=>date('Y-m-d H:i:s')
-            ,"utilisateur_id"=>Utilisateur::inRandomOrder()->first()->id
-            , "sport_id"=>Sport::inRandomOrder()->first()->id
-        ]);
-        Service::factory(3)->create();
+        //Inscription::create([
+        //    "date_inscription"=>date('Y-m-d H:i:s')
+        //    ,"utilisateur_id"=>Utilisateur::inRandomOrder()->first()->id
+        //    , "sport_id"=>Sport::inRandomOrder()->first()->id
+        //]);
+        //Service::factory(3)->create();
     }
 }

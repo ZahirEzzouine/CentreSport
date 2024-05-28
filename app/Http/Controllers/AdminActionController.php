@@ -1,6 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Événement;
+use App\Models\Utilisateur;
+use App\Models\Sport;
+use App\Models\Service;
+use App\Models\Inscription;
 
 use Illuminate\Http\Request;
 
@@ -9,12 +14,19 @@ class AdminActionController extends Controller
     /**
      * afficher get_ajouter view.
      */
+    public function __construct() {
+        $this->middleware("authCentre");
+    }
+
+    public function get_interface_admin(){
+        return view("AdminActions.get_interface_admin");
+    }
 
 
-    public function get_all_événement()
+    public function get_all_événements()
     {
         $événements=Événement::all();
-        return view("AdminActions.get_all_événement",compact("événements"));
+        return view("AdminActions.get_all_événements",compact("événements"));
     }
 
 
@@ -44,7 +56,7 @@ class AdminActionController extends Controller
      */
     public function get_modifier_événement($id)
     {
-        $événement=Utilisateur::select("select * from utilisateurs where email =".$request->email);
+        $événement=Événement::select("select * from événements where id =".$id);
         return view("AdminActions.get_modifier_événement",compact("événement"));
     }
 
@@ -65,6 +77,12 @@ class AdminActionController extends Controller
         return redirect("/");
     }
 
+
+    public function get_all_sports()
+    {
+        $sports=Sport::all();
+        return view("AdminActions.get_all_sports",compact("sports"));
+    }
 
     public function get_ajouter_sport()
     {

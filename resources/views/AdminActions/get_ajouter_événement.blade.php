@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
+            margin: 0;
+            padding: 0;
+        }
+        .ajouter_événement_content{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, rgb(180, 144, 159), #aaf);
             display: flex;
@@ -16,7 +20,6 @@
             height: 100vh;
             margin: 0;
         }
-
         form {
             background: #fff;
             padding: 30px;
@@ -90,24 +93,26 @@
 <body>
     @extends('layouts.layout')
     @section('content')
-    <form action="">
-        @csrf
-        <div class="form-header">
-            <h2>Special Form</h2>
-            <p>Please fill in the details</p>
-        </div>
-        <label for="titre">Titre</label>
-        <input type="text" id="titre" name="titre" placeholder="Enter title">
-        <label for="description">Description</label>
-        <input type="text" id="description" name="description" placeholder="Enter description">
-        <select name="sport_id">
-            @foreach ($sports as $sport)
-            <option value="{{$sport->id}}">{{$sport->nom}}</option>
-            @endforeach
-        </select>
-
-        <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
-    </form>
+    <div class="ajouter_événement_content">
+        <form action="/get_ajouter_événement">
+            @csrf
+            <div class="form-header">
+                <h2>Special Form</h2>
+                <p>Please fill in the details</p>
+            </div>
+            <label for="titre">Titre</label>
+            <input type="text" id="titre" name="titre" placeholder="Enter title">
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description" placeholder="Enter description">
+            <select name="sport_id">
+                @foreach ($sports as $sport)
+                <option value="{{$sport->id}}">{{$sport->nom}}</option>
+                @endforeach
+            </select>
+    
+            <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+        </form>
+    </div>
     @endsection
 
 </body>

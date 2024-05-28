@@ -9,6 +9,7 @@ use App\Http\Requests\Mot_de_pass_oublier_Request;
 use App\Http\Requests\NouvelleMotDePasseRequest;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 class AuthentificationController extends Controller
 {
     /**
@@ -30,9 +31,11 @@ class AuthentificationController extends Controller
     /**
      * vérifier le login.
      */
-    public function check_login(LoginRequest $request)
+    public function check_login(Request $request)
     {
-        Auth::attempt(["email"=>request->email,"password"=>$request->password]);
+        if( Auth::attempt(["email"=>$request->email,"password"=>$request->password])){
+            return to_route("get_interface_admin");
+        }
     }
 
     //vérifier l'inscription
