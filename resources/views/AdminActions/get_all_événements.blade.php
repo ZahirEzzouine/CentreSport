@@ -1,3 +1,5 @@
+@extends("layouts.layout")
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        body {
+        .get_all_événement_content{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f9;
             display: flex;
+            margin-top: 5em;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            height: 90vh;
         }
 
         table {
@@ -28,15 +30,10 @@
             text-align: left;
         }
 
-        table thead {
-            background-color: #007bff;
-            color: #fff;
-        }
-
 
 
         table th {
-            background-color: #007bff;
+            background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
             color: white;
             font-weight: bold;
         }
@@ -51,7 +48,7 @@
     </style>
 </head>
 <body>
-
+    <div class="get_all_événement_content">
     <table>
             <tr>
                 <th>Titre</th>
@@ -72,5 +69,8 @@
             </tr>
             @endforeach
     </table>
+    </div>
 </body>
 </html>
+
+@endsection

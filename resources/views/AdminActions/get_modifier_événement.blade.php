@@ -1,3 +1,5 @@
+@extends("layouts.layout")
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,3 +103,5 @@ button:hover {
     </div>
 </body>
 </html>
+
+@endsection

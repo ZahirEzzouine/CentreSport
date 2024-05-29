@@ -119,12 +119,22 @@
             <li class="nav-item">
                 <a class="nav-link" href="contact">Contact</a>
               </li>
+
+        <?php 
+            $check=auth()->user();
+            if (isset($check)) {
+              echo "<li class='nav-item'>
+                <a class='nav-link' href='/get_interface_admin'>Interface</a>
+              </li>";
+            }else{
+              echo "<div class='conteneur_button_navbar'>
+          <a href='get_login'><i class='fa fa-user'></i> connecter </a>
+          <a href='get_inscription' ><i class='fa fa-user-plus'></i> S'inscrire</a>
+            </div>";
+            }
+        ?>
           </ul>
         </div>
-        <div class="conteneur_button_navbar">
-          <a href="get_login"><i class="fa fa-user"></i> connecter </a>
-          <a href="get_inscription" ><i class="fa fa-user-plus"></i> S'inscrire</a>
-      </div>
     </nav>
       <div class="margin"></div>
 

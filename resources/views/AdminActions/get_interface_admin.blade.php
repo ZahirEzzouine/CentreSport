@@ -11,12 +11,15 @@
     .interface-content{
         margin-top: 10em;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        height:53vh;
+        width: 100%;
     }
-    .interface-content .card_container{
-        box-sizing: border-box;
-
+    .interface-content .card_content{
+        height: 10.15em;
+        width: 20em !important;
+        border:solid 1px;
+        margin: 1em;
     }
     .card{
         height: 10em !important;
@@ -24,42 +27,60 @@
     }
     .btn{
         background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+        height: 3em;
+        font-weight: bold !important;
     }
 </style>
 <body>
 @extends('layouts.layout')
 @section('content')
     <div class="interface-content">
-        <div class="container card_container">
+        <div class="card_content">
             <div class="card" >
                 <div class="card-body">
-                    <h4 class="card-title">Ajouter un nouveau sport</h4>
-                    <a href="/get_ajouter_sport" class="btn border rounded-3 ">Ajouter</a>
+                    <h4 class="card-title">Ajouter événement</h4>
                 </div>
+                <a href="/get_ajouter_événement" class="btn border rounded-3 ">Ajouter</a>
             </div>
         </div>
-            <div class="container card_container">
+        <div class="card_content">
+            <div class="card" >
+                <div class="card-body">
+                    <h4 class="card-title">Ajouter sport</h4>
+                </div>                    
+                    <a href="/get_ajouter_sport" class="btn border rounded-3 ">Ajouter</a>
+            </div>
+        </div>
+            <div class="card_content">
                 <div class="card" >
                     <div class="card-body">
-                        <h4 class="card-title">Ajouter un nouveau événement</h4>
-                        <a href="/get_ajouter_événement" class="btn border rounded-3 ">Ajouter</a>
+                        <h4 class="card-title">Ajouter utilisateur</h4>
                     </div>
+                    <a href="/get_ajouter_utilisateur" class="btn border rounded-3 ">Ajouter</a>
                 </div>
             </div>
-            <div class="container card_container">
+            <div class="card_content">
                 <div class="card" >
                     <div class="card-body">
                         <h4 class="card-title">Afficher tous les événements</h4>
-                        <a href="/get_all_événements" class="btn border rounded-3 ">Afficher</a>
                     </div>
+                    <a href="/get_all_événements" class="btn border rounded-3 ">Afficher</a>
                 </div>
             </div>
-            <div class="container card_container">
+            <div class="card_content">
                 <div class="card" >
                     <div class="card-body">
                         <h4 class="card-title">Afficher tous les sports disponible</h4>
-                        <a href="/get_all_sports" class="btn border rounded-3 ">Afficher</a>
                     </div>
+                    <a href="/get_all_sports" class="btn border rounded-3 ">Afficher</a>
+                </div>
+            </div>
+            <div class="card_content">
+                <div class="card" >
+                    <div class="card-body">
+                        <h4 class="card-title">Afficher tous les utilisateurs disponible</h4>
+                    </div>
+                    <a href="/get_all_utilisateurs" class="btn border rounded-3 ">Afficher</a>
                 </div>
             </div>
     </div>

@@ -13,18 +13,17 @@
         }
         .ajouter_événement_content{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, rgb(180, 144, 159), #aaf);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            height: 90vh;
+            margin-top: 5em;
         }
         form {
-            background: #fff;
+            background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 2px 50px 10px rgb(0, 0, 0);
             max-width: 400px;
             width: 100%;
         }
@@ -109,7 +108,6 @@
                 <option value="{{$sport->id}}">{{$sport->nom}}</option>
                 @endforeach
             </select>
-    
             <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
         </form>
     </div>
