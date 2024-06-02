@@ -16,7 +16,6 @@
 
 .content {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
     display: flex;
     justify-content: center;
     align-items: center;

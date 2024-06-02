@@ -6,15 +6,11 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
         }
         .form {
-            background: #b9ff6a;
-            padding: 20px;
+            margin: 12% auto;
+            background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+            padding: 24px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 100%;
@@ -57,10 +53,10 @@
     <form action="/check_code_verification" method="POST" class="form">
         @csrf
         <label for="email" class="label" >E-mail</label>
-        <input type="email" id="email" name="email" class="input-email" required>
+        <input type="email" id="email" name="email" class="input-email" placeholder="Entrer votre email"  required>
         <label for="code" class="label">Code</label>
-        <input type="text" id="code" name="code_de_recuperation" class="input-code" required>
+        <input type="text" id="code" name="code_de_recuperation" class="input-code" placeholder="Entrer voter code" required>
         <input type="submit" value="Submit" class="input-submit">
     </form>
-    @endsection
+
 

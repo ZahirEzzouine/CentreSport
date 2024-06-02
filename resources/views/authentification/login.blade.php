@@ -16,6 +16,7 @@
         padding: 0;
     }
     .form_content h1{
+
         text-align: center;
         font-size: 50px;
         margin: 5px;
