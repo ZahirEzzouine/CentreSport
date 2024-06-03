@@ -11,7 +11,7 @@ class Mot_de_pass_oublier_Request extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**

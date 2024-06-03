@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Produitcontrol;
 use App\Http\Controllers\AuthentificationController;
 use App\Http\Controllers\NavbarController;
 use App\Http\Controllers\AdminActionController;
+
 Route::get('/', function () {
     return view('welcome');
 })->name("home");
@@ -19,18 +19,15 @@ Route::get('/get_mot_de_passe_oublier',[AuthentificationController::class , 'get
 Route::post('/check_code_verification',[AuthentificationController::class , 'check_code_verification']);
 Route::post('/new_password',[AuthentificationController::class ],'new_password');
 
-
-
 //événement
 
-Route::post('/__construct',[AdminActionController::class,'__construct']);
 
 Route::get('/get_ajouter_événement',[AdminActionController::class ,'get_ajouter_événement']);
 Route::get('/get_all_événements',[AdminActionController::class ,'get_all_événements']);
-Route::post('/ajouter_événement',[AdminActionController::class ,'ajouter_événement']);
+Route::get('/ajouter_événement',[AdminActionController::class ,'ajouter_événement']);
 Route::get('/get_modifier_événement/{id}',[AdminActionController::class ,'get_modifier_événement']);
-Route::post('/modifier_événement',[AdminActionController::class ,'modifier_événement']);
-Route::post('supprimer_événement',[AdminActionController::class,'supprimer_événement']);
+Route::post('/modifier_événement/{id}',[AdminActionController::class ,'modifier_événement']);
+Route::get('supprimer_événement/{id}',[AdminActionController::class,'supprimer_événement']);
 
 
 //sport
@@ -38,13 +35,14 @@ Route::get('/get_ajouter_sport',[AdminActionController::class ,'get_ajouter_spor
 Route::get('/get_all_sports',[AdminActionController::class ,'get_all_sports']);
 Route::post('/ajouter_sport',[AdminActionController::class ,'ajouter_sport']);
 Route::get('/get_modifier_sport/{id}',[AdminActionController::class ,'get_modifier_sport']);
-Route::post('/modifier_sport',[AdminActionController::class ,'modifier_sport']);
-Route::post('supprimer_sport',[AdminActionController::class,'supprimer_sport']);
+Route::post('/modifier_sport/{id}',[AdminActionController::class ,'modifier_sport']);
+Route::get('supprimer_sport/{id}',[AdminActionController::class,'supprimer_sport']);
 
 
 
-
-
+//utilisateur
+Route::get('/get_all_utilisateurs',[AdminActionController::class ,'get_all_utilisateurs']);
+Route::get('supprimer_utilisateur/{id}',[AdminActionController::class,'supprimer_utilisateur']);
 //navbar
 Route::get('/about',[NavbarController::class ,'about']);
 Route::get('/services',[NavbarController::class ,'services']);
@@ -55,5 +53,4 @@ Route::get('/contact',[NavbarController::class ,'contact']);
 
 
 //interface admin
-Route::post('/__construct',[AdminActionController::class,'__construct']);
 Route::get('/get_interface_admin',[AdminActionController::class ,'get_interface_admin'])->name("get_interface_admin");

@@ -50,7 +50,7 @@
             text-decoration: none;
         }
         img{
-            height:7em;
+            height:10em;
             width: 25em;
         }
     </style>
@@ -59,17 +59,21 @@
     <div class="get_all_événement_content">
     <table>
             <tr>
-                <th>Sport</th>
-                <th>Image</th>
-                <th>Modifier</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Numero de telephone</th>
+                <th>Age</th>
+                <th>Type utilisateur</th>
                 <th>Supprimer</th>
             </tr>
-            @foreach ($sports as $sport)
+            @foreach ($utilisateurs as $utilisateur)
             <tr>
-                <td>{{$sport->nom}}</td>
-                <td><img src="{{$sport->image}}" alt=""></td>
-                <td><a href="{{'get_modifier_sport/'.$sport->id}}">Modifier</a></td>
-                <td><a href="{{'supprimer_sport/'.$sport->id}}">Supprimer</a></td>
+                <td>{{$utilisateur->nom}}</td>
+                <td>{{$utilisateur->email}}</td>
+                <td>{{$utilisateur->num_phone}}</td>
+                <td>{{$utilisateur->age}}</td>
+                <td>{{$utilisateur->type_utilisateur}}</td>
+                <td><a href="{{'supprimer_utilisateur/'.$utilisateur->id}}">Supprimer</a></td>
             </tr>
             @endforeach
     </table>

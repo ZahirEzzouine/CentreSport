@@ -11,7 +11,7 @@ class Événement extends Model
     protected $fillable=["titre","description","envoyer","sport_id"];
 
     public function get_sport(){
-        return $this->belongsTo(Sport::class,'id');
+        return $this->belongsTo(Sport::class,'sport_id');
     }
 
 }

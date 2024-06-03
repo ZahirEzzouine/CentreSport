@@ -15,12 +15,11 @@ class ServiceFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition(): array
-    {
+    {//"https://source.unsplash.com/random"
         return [
-            "titre"=> fake()->name(),
-            "image"=>"https://source.unsplash.com/random",
-            "description"=> "pratique cette sport c'est le sport
-            le plus populaire dans tous le monde"
+            "titre"=> "Natation",
+            "image"=>"images_services/natation.avif",
+            "description"=> "pratiquer le sport des rois"
         ];
     }
 }

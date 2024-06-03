@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);*/
-        Utilisateur::factory(3)->create();
+        //Utilisateur::factory(1)->create();
         //Sport::factory(3)->create();
         //Événement::factory(3)->create();
         //Inscription::create([
@@ -31,6 +31,6 @@ class DatabaseSeeder extends Seeder
         //    ,"utilisateur_id"=>Utilisateur::inRandomOrder()->first()->id
         //    , "sport_id"=>Sport::inRandomOrder()->first()->id
         //]);
-        //Service::factory(3)->create();
+        //Service::factory(1)->create();
     }
 }

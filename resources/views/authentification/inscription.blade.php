@@ -24,7 +24,7 @@
 
 .form-container {
     background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-    padding: 40px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -67,6 +67,7 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
+    height: 2em !important;
 }
 
 
@@ -89,7 +90,7 @@ button:hover {
 </style>
 <div class="content">
     <div class="form-container">
-        <form action="store_inscription" class="form" method="POST">
+        <form action="/store_inscription" class="form" method="POST">
             @csrf
             <h2>Inscription</h2>
             <div class="input-row">
@@ -105,7 +106,7 @@ button:hover {
             <div class="input-row">
                 <div class="input-group">
                     <label for="phone">Téléphone</label>
-                    <input type="tel"  name="telephone" required>
+                    <input type="tel"  name="num_phone" required>
                 </div>
                 <div class="input-group">
                     <label for="password">Mot de passe</label>
@@ -116,6 +117,12 @@ button:hover {
                 <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email"  name="email" required>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="email">code de recuperation</label>
+                    <input type="text"  name="code_de_recuperation" required>
                 </div>
             </div>
             <button type="submit">S'inscrire</button>

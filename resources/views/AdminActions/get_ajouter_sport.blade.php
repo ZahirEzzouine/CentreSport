@@ -95,7 +95,7 @@
                 </div>
             </div>
             <script>
-                    let input=document.getElementById("image_sport");
+                    let input =document.getElementById("image_sport");
                     input.addEventListener("click",function(){
                     let image =document.getElementById("image_icone");
                     image.style.transform="scale(0.9)"

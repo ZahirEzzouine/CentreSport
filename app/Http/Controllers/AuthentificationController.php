@@ -10,6 +10,7 @@ use App\Http\Requests\NouvelleMotDePasseRequest;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Utilisateur;
 class AuthentificationController extends Controller
 {
     /**
@@ -33,22 +34,49 @@ class AuthentificationController extends Controller
      */
     public function check_login(Request $request)
     {
-        if( Auth::attempt(["email"=>$request->email,"password"=>$request->password])){
-            return to_route("get_interface_admin");
+        if(Auth::attempt(["email"=>$request->email,"password"=>$request->password])){
+            $user = DB::table('utilisateurs')->where('email', $request->email)->first();
+            if( $user->type_utilisateur ==="admin"){
+                return to_route("get_interface_admin");
+            }else{
+                return to_route("get_interface_admin");
+            }
         }
     }
 
     //vérifier l'inscription
-    public function store_inscription(InscriptionRequest $request)
+    public function store_inscription(Request $request)
     {
-        Utilisateur::create([
+        if(auth()->user()){
+            $utilisateur=Utilisateur::create([
+                "nom" => $request->nom,
+                "email" => $request->email,
+                "password" => Hash::make($request->password),
+                "num_phone" => $request->num_phone,
+                "age" => $request->age,
+                "code_de_recuperation" => $request->code_de_recuperation,
+                "type_utilisateur" => "admin"
+        ]);
+            if($utilisateur){
+                return redirect("get_all_utilisateurs");
+            }
+        }else{
+            $utilisateur=Utilisateur::create([
             "nom" => $request->nom,
             "email" => $request->email,
             "password" => Hash::make($request->password),
             "num_phone" => $request->num_phone,
             "age" => $request->age,
+            "code_de_recuperation" => $request->code_de_recuperation,
             "type_utilisateur" => "normal"
         ]);
+            if($utilisateur){
+                return to_route("get_login");
+        }
+        }
+
+
+
     }
 
     /**

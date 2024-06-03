@@ -54,9 +54,9 @@
             <div class="card_content">
                 <div class="card" >
                     <div class="card-body">
-                        <h4 class="card-title">Ajouter utilisateur</h4>
+                        <h4 class="card-title">Ajouter admin</h4>
                     </div>
-                    <a href="/get_ajouter_utilisateur" class="btn border rounded-3 ">Ajouter</a>
+                    <a href="/get_inscription" class="btn border rounded-3 ">Ajouter</a>
                 </div>
             </div>
             <div class="card_content">

@@ -75,19 +75,19 @@
 @section("content")
             <div class="container form_container admin_action">
                 <div class="logo_sport">
-                    <img src="images/modifier_sport.jpg" alt="" />
+                    <img src="/images/modifier_sport.jpg" alt="" />
                 </div>
                 <div class="form">
-                    <form action="/ajouter_sport" method="POST" enctype="multipart/form-data">
+                    <form action="/modifier_sport/{{$sport->id}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="nom_sport">
-                            <input type="text" name="nom" placeholder="Nom de sport" />
+                            <input type="text" name="nom" value="{{old("nom",$sport->nom)}}" placeholder="Nom de sport" />
                             <span class="erreur_zone"></span>
                         </div>
                         <div class="image_sport" id="image_sport">
                             <label>Telecharger une image ici</label>
-                            <img src="images/upload_image.png" id="image_icone" alt="">
-                            <input type="file" name="image" id="image_input"/>
+                            <img src="/images/upload_image.png" id="image_icone" alt="">
+                            <input type="file" name="image" value="{{old("image",$sport->image)}}" id="image_input"/>
                             <span class="erreur_zone"></span>
                         </div>
                         <input type="submit" value="Modifier" class="btn" />

@@ -93,7 +93,7 @@
     @extends('layouts.layout')
     @section('content')
     <div class="ajouter_événement_content">
-        <form action="/get_ajouter_événement">
+        <form action="/ajouter_événement">
             @csrf
             <div class="form-header">
                 <h2>Special Form</h2>
@@ -104,10 +104,15 @@
             <label for="description">Description</label>
             <input type="text" id="description" name="description" placeholder="Enter description">
             <select name="sport_id">
+                <option value=""></option>
                 @foreach ($sports as $sport)
                 <option value="{{$sport->id}}">{{$sport->nom}}</option>
                 @endforeach
             </select>
+            <div class="envoyer">
+                <input type="radio" name="envoyer" id="" value="oui"> oui
+                <input type="radio" name="envoyer" id="" value="non" checked> non
+            </div>
             <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
         </form>
     </div>

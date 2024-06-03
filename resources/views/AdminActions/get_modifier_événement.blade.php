@@ -88,14 +88,14 @@ button:hover {
 <body>
     <div class="container">
         <h2>Modifier Événement</h2>
-        <form action="">
+        <form action="/modifier_événement" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="titre">Titre</label>
-                <input type="text" id="titre" name="titre" placeholder="Enter title">
+                <input type="text" id="titre" name="titre"  placeholder="Enter title">
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <input type="text" id="description" name="description" placeholder="Enter description">
+                <input type="text" id="description" name="description"  placeholder="Enter description">
             </div>
 
             <button type="submit" name="modifier_événement">Update</button>

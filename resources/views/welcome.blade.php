@@ -209,7 +209,7 @@ input:checked + label .description {
                 <div class="row">
                     <div class="icon">3</div>
                     <div class="description">
-                        <h4>image</h4>
+                        <h4>Tennis</h4>
                         <p>tennis is a dynamic and engaging sport that combines athleticism,.</p>
                     </div>
                 </div>

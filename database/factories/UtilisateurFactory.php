@@ -19,12 +19,12 @@ class UtilisateurFactory extends Factory
     {
         return [
             "nom" => "zakaria",
-            "email" =>"zz@gmail.com",
+            "email" =>"user6@gmail.com",
             "password" =>Hash::make("zakaria"),
             "num_phone" =>"123456",
             "age" =>"20",
             "code_de_recuperation" =>"12345",
-            "type_utilisateur" =>"normal"
+            "type_utilisateur" =>"admin"
         ];
     }
 }

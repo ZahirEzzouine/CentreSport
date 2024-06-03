@@ -12,10 +12,9 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f9;
             display: flex;
-            margin-top: 5em;
+            margin-top: 10em;
             justify-content: center;
             align-items: center;
-            height: 90vh;
         }
 
         table {
@@ -30,10 +29,15 @@
             text-align: left;
         }
 
+        table thead {
+            background-color: #007bff;
+            color: #fff;
+        }
+
 
 
         table th {
-            background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+            background-color: #007bff;
             color: white;
             font-weight: bold;
         }
@@ -44,6 +48,10 @@
 
         td a{
             text-decoration: none;
+        }
+        img{
+            height:10em;
+            width: 25em;
         }
     </style>
 </head>
@@ -65,7 +73,8 @@
                 <td>{{$événement->envoyer}}</td>
                 <td>{{$événement->get_sport->nom}}</td>
                 <td><a href="{{'get_modifier_événement/'.$événement->id}}">Modifier</a></td>
-                <td><a href="{{'get_supprimer_événement/'.$événement->id}}">Supprimer</a></td>
+                <td><a href="{{'supprimer_événement/'.$événement->id}}">Supprimer</a></td>
+                
             </tr>
             @endforeach
     </table>

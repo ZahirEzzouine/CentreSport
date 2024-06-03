@@ -71,6 +71,7 @@
     height: 6em;
     margin-top: 4em;
     background-image: linear-gradient( 179deg,  rgb(28, 27, 27) 9.2%, rgb(135, 22, 22) 103.9% );
+    padding-top: 0.2em;
 }
 .footer_container div{
     margin-left: 5em;
@@ -140,7 +141,7 @@
 
 @yield('content')
 
-<div class=" footer_container">
+<div class="footer_container">
   <div class="icone_container">
       <span>Suivez notre centre</span>
       <a href=""><i class="fa fa-whatsapp"></i></a>
